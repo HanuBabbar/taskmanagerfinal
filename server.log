@@ -1,0 +1,8 @@
+
+> task_manager@1.0.0 start
+> node app.js
+
+server running on port 8080!
+Database Connected!
+Socket.IO Redis adapter connected
+^C

@@ -1,0 +1,24 @@
+
+> task_manager@1.0.0 test
+> mocha test/**/*.test.js --exit
+
+
+
+  Auth API
+Database Connected!
+Socket.IO Redis adapter connected
+    ✔ should register a new user (493ms)
+    ✔ should login an existing user (411ms)
+    ✔ should return current user profile
+    ✔ should fail to login with wrong password (463ms)
+
+  Tasks API
+    ✔ should create a new task
+    ✔ should get all tasks
+    ✔ should update a task
+    ✔ should delete a task
+    ✔ should fail to get deleted task
+
+
+  9 passing (2s)
+

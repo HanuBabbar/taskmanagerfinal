@@ -1,0 +1,111 @@
+
+> task_manager@1.0.0 test
+> mocha test/**/*.test.js --exit
+
+
+
+  Auth API
+Database Connected!
+Socket.IO Redis adapter connected
+    1) should register a new user
+    2) should login an existing user
+    3) should return current user profile
+    ✔ should fail to login with wrong password
+
+  Tasks API
+    4) should create a new task
+    5) should get all tasks
+    6) should update a task
+    7) should delete a task
+    8) should fail to get deleted task
+
+
+  1 passing (646ms)
+  8 failing
+
+  1) Auth API
+       should register a new user:
+
+      AssertionError: expected 409 to equal 201
+      + expected - actual
+
+      -409
+      +201
+      
+      at Context.<anonymous> (file:///C:/Users/Hanu/Desktop/taskmanagerdev/test/auth.test.js:27:31)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+
+  2) Auth API
+       should login an existing user:
+
+      AssertionError: expected 401 to equal 200
+      + expected - actual
+
+      -401
+      +200
+      
+      at Context.<anonymous> (file:///C:/Users/Hanu/Desktop/taskmanagerdev/test/auth.test.js:41:31)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+
+  3) Auth API
+       should return current user profile:
+
+      AssertionError: expected 401 to equal 200
+      + expected - actual
+
+      -401
+      +200
+      
+      at Context.<anonymous> (file:///C:/Users/Hanu/Desktop/taskmanagerdev/test/auth.test.js:51:31)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+
+  4) Tasks API
+       should create a new task:
+     AssertionError: Target cannot be null or undefined.
+      at Context.<anonymous> (file:///C:/Users/Hanu/Desktop/taskmanagerdev/test/tasks.test.js:34:39)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+
+  5) Tasks API
+       should get all tasks:
+     AssertionError: expected undefined not to be undefined
+      at Context.<anonymous> (file:///C:/Users/Hanu/Desktop/taskmanagerdev/test/tasks.test.js:47:32)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+
+  6) Tasks API
+       should update a task:
+
+      AssertionError: expected 500 to equal 200
+      + expected - actual
+
+      -500
+      +200
+      
+      at Context.<anonymous> (file:///C:/Users/Hanu/Desktop/taskmanagerdev/test/tasks.test.js:59:31)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+
+  7) Tasks API
+       should delete a task:
+
+      AssertionError: expected 500 to equal 200
+      + expected - actual
+
+      -500
+      +200
+      
+      at Context.<anonymous> (file:///C:/Users/Hanu/Desktop/taskmanagerdev/test/tasks.test.js:69:31)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+
+  8) Tasks API
+       should fail to get deleted task:
+
+      AssertionError: expected 500 to equal 404
+      + expected - actual
+
+      -500
+      +404
+      
+      at Context.<anonymous> (file:///C:/Users/Hanu/Desktop/taskmanagerdev/test/tasks.test.js:78:31)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+
+
+

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- favicon -->
+  <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/3082/3082854.png" type="image/x-icon" />
+  <!-- font awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+  <!-- normalize css -->
+  <link rel="stylesheet" href="./normalize.css" />
+  <!-- main css -->
+  <link rel="stylesheet" href="./main.css" />
+  <link rel="stylesheet" href="./priority.css" />
+  <title>Task Manager</title>
+</head>
+
+<body>
+  <main class="app-root">
+    <!-- Auth container: shown when no token -->
+    <section class="auth-container" style="display: none; max-width: 600px; margin: 6rem auto;">
+      <form id="auth-form" class="form">
+        <h4 id="auth-title">Login</h4>
+        <div class="form-row">
+          <label for="auth-username">Username</label>
+          <input id="auth-username" type="text" placeholder="username" />
+        </div>
+        <div class="form-row">
+          <label for="auth-email">Email</label>
+          <input id="auth-email" type="email" placeholder="email@example.com" />
+        </div>
+        <div class="form-row">
+          <label for="auth-password">Password</label>
+          <input id="auth-password" type="password" placeholder="password" />
+        </div>
+        <div class="form-row">
+          <button id="auth-submit" class="btn block">Submit</button>
+        </div>
+        <p style="margin-top:1rem;">Don't have an account? <a href="#" id="toggle-auth">Register</a></p>
+        <div class="form-alert" id="auth-alert"></div>
+      </form>
+    </section>
+
+    <!-- Dashboard / tasks: shown when token exists -->
+    <section class="dashboard" style="display: none;">
+      <div class="app-layout">
+        <aside class="sidebar">
+          <div class="sidebar-top">
+            <h4>Hi,</h4>
+            <div id="sidebar-username" class="sidebar-username"></div>
+          </div>
+          <nav class="sidebar-nav">
+            <a href="#" class="sidebar-link">Tasks</a>
+            <button id="theme-toggle" class="btn small" style="margin-top: 1rem;">Dark Mode</button>
+            <!-- future links -->
+          </nav>
+        </aside>
+
+        <div class="main-content">
+          <div class="header-row">
+            <div style="display:flex; align-items:center; gap:0.75rem;">
+              <h3>Task Manager</h3>
+            </div>
+            <div>
+              <button id="logout-btn" class="btn hipster">Logout</button>
+            </div>
+          </div>
+
+          <form class="task-form">
+            <h4>task manager</h4>
+            <div class="form-control">
+              <input type="text" name="name" class="task-input" placeholder="e.g. wash dishes" />
+              <select name="priority" class="task-input" style="width: auto; cursor: pointer;">
+                <option value="Low">Low</option>
+                <option value="Medium">Medium</option>
+                <option value="High">High</option>
+              </select>
+              <button type="submit" class="btn submit-btn">submit</button>
+            </div>
+            <div class="form-alert"></div>
+          </form>
+          <section class="tasks-container">
+            <p class="loading-text">Loading...</p>
+            <div class="tasks"></div>
+          </section>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- axios -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
+    integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- socket.io client -->
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="./browser-app.js"></script>
+</body>
+
+</html>

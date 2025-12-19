@@ -1,0 +1,75 @@
+
+> task_manager@1.0.0 test
+> mocha test/**/*.test.js --exit
+
+
+
+  Auth API
+Database Connected!
+Socket.IO Redis adapter connected
+    ✔ should register a new user (495ms)
+    ✔ should login an existing user (399ms)
+    ✔ should return current user profile
+    ✔ should fail to login with wrong password (409ms)
+
+  Tasks API
+    1) should create a new task
+    2) should get all tasks
+    3) should update a task
+    4) should delete a task
+    5) should fail to get deleted task
+
+
+  4 passing (2s)
+  5 failing
+
+  1) Tasks API
+       should create a new task:
+     AssertionError: Target cannot be null or undefined.
+      at Context.<anonymous> (file:///C:/Users/Hanu/Desktop/taskmanagerdev/test/tasks.test.js:37:39)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+
+  2) Tasks API
+       should get all tasks:
+     AssertionError: expected undefined not to be undefined
+      at Context.<anonymous> (file:///C:/Users/Hanu/Desktop/taskmanagerdev/test/tasks.test.js:50:32)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+
+  3) Tasks API
+       should update a task:
+
+      AssertionError: expected 500 to equal 200
+      + expected - actual
+
+      -500
+      +200
+      
+      at Context.<anonymous> (file:///C:/Users/Hanu/Desktop/taskmanagerdev/test/tasks.test.js:62:31)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+
+  4) Tasks API
+       should delete a task:
+
+      AssertionError: expected 500 to equal 200
+      + expected - actual
+
+      -500
+      +200
+      
+      at Context.<anonymous> (file:///C:/Users/Hanu/Desktop/taskmanagerdev/test/tasks.test.js:72:31)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+
+  5) Tasks API
+       should fail to get deleted task:
+
+      AssertionError: expected 500 to equal 404
+      + expected - actual
+
+      -500
+      +404
+      
+      at Context.<anonymous> (file:///C:/Users/Hanu/Desktop/taskmanagerdev/test/tasks.test.js:81:31)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+
+
+
